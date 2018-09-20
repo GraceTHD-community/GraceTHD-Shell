@@ -1,0 +1,7 @@
+GraceTHD-Shell
+
+### Changelog
+
+v0.01.0-alpha
+Initialisation du projet
+- add: ajout des scripts .sh de Ricardo Cohen de E5Group. (demande #200)
