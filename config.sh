@@ -1,8 +1,6 @@
 #!/bin/bash
 
 ### PARAMETRES A MODIFIER
-# postgres
-postgresbindir="/Applications/Postgres.app/Contents/Versions/9.5/bin"
 # base de données
 pghostname="127.0.0.1"
 pguser="root"
@@ -30,6 +28,6 @@ if [ ${echoall} = "o" ]; then
 else
   echovalue="--quiet";
 fi
-psqlcommandnodb="${postgresbindir}/psql --host=${pghostname} --port=${pgport} --username=${pguser} --set=PGPASSWORD=${pgpassword} --set=ON_ERROR_STOP=1 ${echovalue} --dbname=postgres"
-psqlcommand="${postgresbindir}/psql --host=${pghostname} --port=${pgport} --username=${pguser} --set=PGPASSWORD=${pgpassword} --set=ON_ERROR_STOP=1 ${echovalue} --dbname=${pgdb}"
-shp2pgsql="${postgresbindir}/shp2pgsql -t 2D -s ${pgsrid} -a -W ${pgcode}"
+psqlcommandnodb="psql --host=${pghostname} --port=${pgport} --username=${pguser} --set=PGPASSWORD=${pgpassword} --set=ON_ERROR_STOP=1 ${echovalue} --dbname=postgres"
+psqlcommand="psql --host=${pghostname} --port=${pgport} --username=${pguser} --set=PGPASSWORD=${pgpassword} --set=ON_ERROR_STOP=1 ${echovalue} --dbname=${pgdb}"
+shp2pgsql="shp2pgsql -t 2D -s ${pgsrid} -a -W ${pgcode}"
